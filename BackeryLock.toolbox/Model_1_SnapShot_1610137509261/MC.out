@@ -1,0 +1,45 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 53 and seed 7583401301540100855 with 1 worker on 1 cores with 592MB heap and 1329MB offheap memory [pid: 6171] (Linux 4.15.0-70-generic amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /home/ruslan/.tlaplus/BackeryLock/BackeryLock.toolbox/Model_1/MC.tla
+Parsing file /home/ruslan/.tlaplus/BackeryLock/BackeryLock.toolbox/Model_1/BackeryLock.tla
+Warning: symbols were renamed.
+Parsing file /home/ruslan/toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/TLC.tla
+Parsing file /home/ruslan/toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Integers.tla
+Parsing file /home/ruslan/toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Sequences.tla
+Parsing file /home/ruslan/toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Naturals.tla
+Parsing file /home/ruslan/toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module BackeryLock
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2021-01-08 23:22:02)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2021-01-08 23:22:05.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(22) at 2021-01-08 23:22:08: 10 948 states generated (10 948 s/min), 3 807 distinct states found (3 807 ds/min), 435 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(75) at 2021-01-08 23:23:08: 1 264 255 states generated (1 253 307 s/min), 442 090 distinct states found (438 283 ds/min), 32 906 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(85) at 2021-01-08 23:24:08: 2 715 659 states generated (1 451 404 s/min), 944 773 distinct states found (502 683 ds/min), 65 516 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
