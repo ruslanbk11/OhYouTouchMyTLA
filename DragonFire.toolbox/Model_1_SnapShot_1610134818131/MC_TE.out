@@ -1,0 +1,557 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 71 and seed 9210060325141419654 with 1 worker on 1 cores with 592MB heap and 1329MB offheap memory [pid: 4904] (Linux 4.15.0-70-generic amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /home/ruslan/.tlaplus/DragonFire/DragonFire.toolbox/Model_1/MC.tla
+Parsing file /home/ruslan/.tlaplus/DragonFire/DragonFire.toolbox/Model_1/DragonFire.tla
+Parsing file /home/ruslan/toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/TLC.tla
+Parsing file /home/ruslan/toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Integers.tla
+Parsing file /home/ruslan/toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Naturals.tla
+Parsing file /home/ruslan/toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Sequences.tla
+Parsing file /home/ruslan/toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module DragonFire
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2021-01-08 22:40:14)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2021-01-08 22:40:16.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant NotDoubleCriticalSection is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "thread0Enter" @@ 1 :> "thread1Enter")
+/\ firebrathing = ""
+/\ fireball = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <thread0Enter line 63, col 17 to line 65, col 66 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "MonitorEnter" @@ 1 :> "thread1Enter")
+/\ firebrathing = ""
+/\ fireball = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <MonitorEnter line 67, col 17 to line 71, col 52 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "incinerate_enemies" @@ 1 :> "thread1Enter")
+/\ firebrathing = "sorcerer"
+/\ fireball = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <incinerate_enemies line 73, col 23 to line 76, col 72 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "if1" @@ 1 :> "thread1Enter")
+/\ firebrathing = "sorcerer"
+/\ fireball = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <thread1Enter line 141, col 17 to line 143, col 66 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "if1" @@ 1 :> "A")
+/\ firebrathing = "sorcerer"
+/\ fireball = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <A line 145, col 6 to line 149, col 55 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "if1" @@ 1 :> "release")
+/\ firebrathing = "sorcerer"
+/\ fireball = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <release line 151, col 12 to line 154, col 51 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "if1" @@ 1 :> "thread1Enter")
+/\ firebrathing = "sorcerer"
+/\ fireball = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <if1 line 78, col 8 to line 84, col 47 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "blast_enemies" @@ 1 :> "thread1Enter")
+/\ firebrathing = "sorcerer"
+/\ fireball = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+9: <blast_enemies line 86, col 18 to line 89, col 67 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "if2" @@ 1 :> "thread1Enter")
+/\ firebrathing = "sorcerer"
+/\ fireball = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+10: <thread1Enter line 141, col 17 to line 143, col 66 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "if2" @@ 1 :> "A")
+/\ firebrathing = "sorcerer"
+/\ fireball = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+11: <A line 145, col 6 to line 149, col 55 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "if2" @@ 1 :> "release")
+/\ firebrathing = "sorcerer"
+/\ fireball = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+12: <release line 151, col 12 to line 154, col 51 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "if2" @@ 1 :> "thread1Enter")
+/\ firebrathing = "sorcerer"
+/\ fireball = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+13: <if2 line 91, col 8 to line 97, col 47 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "if3" @@ 1 :> "thread1Enter")
+/\ firebrathing = "sorcerer"
+/\ fireball = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+14: <thread1Enter line 141, col 17 to line 143, col 66 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "if3" @@ 1 :> "A")
+/\ firebrathing = "sorcerer"
+/\ fireball = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+15: <A line 145, col 6 to line 149, col 55 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "if3" @@ 1 :> "release")
+/\ firebrathing = "sorcerer"
+/\ fireball = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+16: <release line 151, col 12 to line 154, col 51 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "if3" @@ 1 :> "thread1Enter")
+/\ firebrathing = "sorcerer"
+/\ fireball = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+17: <if3 line 99, col 8 to line 105, col 47 of module DragonFire>
+/\ temp = defaultInitValue
+/\ c = 0
+/\ pc = (0 :> "critical_section0" @@ 1 :> "thread1Enter")
+/\ firebrathing = "sorcerer"
+/\ fireball = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2021-01-08 22:40:16
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 54, col 1 to line 54, col 4 of module DragonFire>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 9 to line 61, col 70 of module DragonFire: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<thread0Enter line 63, col 1 to line 63, col 12 of module DragonFire>: 2:23
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 63, col 20 to line 63, col 41 of module DragonFire: 187
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 63, col 20 to line 63, col 24 of module DragonFire: 164
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 64, col 20 to line 64, col 58 of module DragonFire: 23
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 65, col 20 to line 65, col 66 of module DragonFire: 23
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<MonitorEnter line 67, col 1 to line 67, col 12 of module DragonFire>: 2:21
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 67, col 20 to line 67, col 41 of module DragonFire: 184
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 67, col 20 to line 67, col 24 of module DragonFire: 163
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 20 to line 68, col 36 of module DragonFire: 42
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 68, col 20 to line 68, col 31 of module DragonFire: 21
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 69, col 20 to line 69, col 45 of module DragonFire: 21
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 70, col 20 to line 70, col 64 of module DragonFire: 21
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 71, col 20 to line 71, col 52 of module DragonFire: 21
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<incinerate_enemies line 73, col 1 to line 73, col 18 of module DragonFire>: 2:19
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 73, col 26 to line 73, col 53 of module DragonFire: 181
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 73, col 26 to line 73, col 30 of module DragonFire: 162
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 74, col 26 to line 74, col 29 of module DragonFire: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 75, col 26 to line 75, col 55 of module DragonFire: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 76, col 26 to line 76, col 72 of module DragonFire: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<if1 line 78, col 1 to line 78, col 3 of module DragonFire>: 4:20
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 78, col 11 to line 78, col 23 of module DragonFire: 181
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 78, col 11 to line 78, col 15 of module DragonFire: 161
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 79, col 15 to line 79, col 26 of module DragonFire: 20
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 80, col 19 to line 81, col 61 of module DragonFire: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 82, col 22 to line 82, col 50 of module DragonFire: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 83, col 22 to line 83, col 39 of module DragonFire: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 84, col 11 to line 84, col 47 of module DragonFire: 20
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<blast_enemies line 86, col 1 to line 86, col 13 of module DragonFire>: 1:9
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 86, col 21 to line 86, col 43 of module DragonFire: 169
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 86, col 21 to line 86, col 25 of module DragonFire: 160
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 87, col 21 to line 87, col 24 of module DragonFire: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 88, col 21 to line 88, col 50 of module DragonFire: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 89, col 21 to line 89, col 67 of module DragonFire: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<if2 line 91, col 1 to line 91, col 3 of module DragonFire>: 1:11
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 91, col 11 to line 91, col 23 of module DragonFire: 170
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 91, col 11 to line 91, col 15 of module DragonFire: 159
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 92, col 15 to line 92, col 26 of module DragonFire: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 93, col 19 to line 94, col 51 of module DragonFire: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 95, col 22 to line 95, col 50 of module DragonFire: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 96, col 22 to line 96, col 39 of module DragonFire: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 97, col 11 to line 97, col 47 of module DragonFire: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<if3 line 99, col 1 to line 99, col 3 of module DragonFire>: 1:8
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 99, col 11 to line 99, col 23 of module DragonFire: 165
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 99, col 11 to line 99, col 15 of module DragonFire: 158
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 100, col 15 to line 100, col 26 of module DragonFire: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 101, col 22 to line 101, col 45 of module DragonFire: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 101, col 34 to line 101, col 45 of module DragonFire: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 102, col 22 to line 102, col 65 of module DragonFire: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 102, col 28 to line 102, col 65 of module DragonFire: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 103, col 22 to line 103, col 50 of module DragonFire: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 104, col 22 to line 104, col 39 of module DragonFire: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 105, col 11 to line 105, col 47 of module DragonFire: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<critical_section0 line 107, col 1 to line 107, col 17 of module DragonFire>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 107, col 25 to line 107, col 51 of module DragonFire: 156
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 109, col 25 to line 109, col 53 of module DragonFire: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 110, col 25 to line 110, col 71 of module DragonFire: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<c1 line 112, col 1 to line 112, col 2 of module DragonFire>: 1:15
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 112, col 10 to line 112, col 21 of module DragonFire: 171
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 112, col 10 to line 112, col 14 of module DragonFire: 156
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 113, col 10 to line 113, col 22 of module DragonFire: 15
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 114, col 10 to line 114, col 39 of module DragonFire: 15
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 115, col 10 to line 115, col 50 of module DragonFire: 15
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<c12 line 117, col 1 to line 117, col 3 of module DragonFire>: 1:11
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 117, col 11 to line 117, col 23 of module DragonFire: 167
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 117, col 11 to line 117, col 15 of module DragonFire: 156
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 118, col 11 to line 118, col 19 of module DragonFire: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 119, col 11 to line 119, col 39 of module DragonFire: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 120, col 11 to line 120, col 54 of module DragonFire: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<c2 line 122, col 1 to line 122, col 2 of module DragonFire>: 1:10
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 122, col 10 to line 122, col 21 of module DragonFire: 166
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 122, col 10 to line 122, col 14 of module DragonFire: 156
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 123, col 10 to line 123, col 22 of module DragonFire: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 124, col 10 to line 124, col 39 of module DragonFire: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 125, col 10 to line 125, col 50 of module DragonFire: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<c22 line 127, col 1 to line 127, col 3 of module DragonFire>: 1:9
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 127, col 11 to line 127, col 23 of module DragonFire: 165
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 127, col 11 to line 127, col 15 of module DragonFire: 156
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 128, col 11 to line 128, col 19 of module DragonFire: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 129, col 11 to line 129, col 48 of module DragonFire: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 130, col 11 to line 130, col 54 of module DragonFire: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<MonitorExit line 132, col 1 to line 132, col 11 of module DragonFire>: 1:8
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 132, col 19 to line 132, col 39 of module DragonFire: 164
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 132, col 19 to line 132, col 23 of module DragonFire: 156
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 133, col 19 to line 133, col 36 of module DragonFire: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 134, col 19 to line 134, col 57 of module DragonFire: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 135, col 19 to line 135, col 51 of module DragonFire: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<thread1Enter line 141, col 1 to line 141, col 12 of module DragonFire>: 54:57
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 141, col 20 to line 141, col 41 of module DragonFire: 213
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 141, col 20 to line 141, col 24 of module DragonFire: 156
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 142, col 20 to line 142, col 47 of module DragonFire: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 143, col 20 to line 143, col 66 of module DragonFire: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<A line 145, col 1 to line 145, col 1 of module DragonFire>: 49:52
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 145, col 9 to line 145, col 19 of module DragonFire: 205
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 145, col 9 to line 145, col 13 of module DragonFire: 153
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 146, col 12 to line 146, col 16 of module DragonFire: 52
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 147, col 17 to line 147, col 53 of module DragonFire: 52
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 148, col 20 to line 148, col 63 of module DragonFire: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 149, col 9 to line 149, col 55 of module DragonFire: 52
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<release line 151, col 1 to line 151, col 7 of module DragonFire>: 44:47
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 151, col 15 to line 151, col 31 of module DragonFire: 197
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 151, col 15 to line 151, col 19 of module DragonFire: 150
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 152, col 15 to line 152, col 38 of module DragonFire: 47
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 153, col 15 to line 153, col 53 of module DragonFire: 47
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 154, col 15 to line 154, col 51 of module DragonFire: 47
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<critical_section1 line 156, col 1 to line 156, col 17 of module DragonFire>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 156, col 25 to line 156, col 51 of module DragonFire: 147
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 158, col 25 to line 158, col 63 of module DragonFire: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 159, col 25 to line 159, col 71 of module DragonFire: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<NotDoubleCriticalSection line 168, col 1 to line 168, col 24 of module DragonFire>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 168, col 29 to line 168, col 88 of module DragonFire: 166
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 168, col 29 to line 168, col 56 of module DragonFire: 166
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 168, col 61 to line 168, col 88 of module DragonFire: 165
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(17) at 2021-01-08 22:40:17: 296 states generated (3 115 s/min), 166 distinct states found (1 747 ds/min), 17 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+296 states generated, 166 distinct states found, 17 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 17.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 1, the maximum 2 and the 95th percentile is 2).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 5755ms at (2021-01-08 22:40:17)
+@!@!@ENDMSG 2186 @!@!@
