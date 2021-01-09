@@ -1,12 +1,15 @@
 ---------------------------- MODULE BackeryLock ----------------------------
 EXTENDS Integers, Sequences
 
-CONSTANT N, MaxTokenNumber
-(*
---algorithm criticalsection6bakery
+CONSTANT N,
+MaxTokenNumber
+(*--algorithm bakery
 {
-    variables choosing = [x \in 1..N |-> FALSE]; number = [x \in 1..N |-> 0];
-        lesslessret = [x \in 1..N |-> FALSE]; maxret = [x \in 1..N |-> 0];
+    variables choosing = [x \in 1..N |-> FALSE]; 
+              number = [x \in 1..N |-> 0];
+              lesslessret = [x \in 1..N |-> FALSE];
+              maxret = [x \in 1..N |-> 0];
+
     procedure NCS()
         variable isEndless;
     {
